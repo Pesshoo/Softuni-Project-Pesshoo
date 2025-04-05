@@ -1,10 +1,23 @@
-import './App.css'
+import { useState } from 'react';
+import './index.css'
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import { Route, Routes } from 'react-router';
+import Catalog from './components/catalog/Catalog';
 
 function App() {
 
   return (
     <>
-      <h1>Hello, World!</h1>
+        <Header/>
+    <div className="wrapper">
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/catalog' element={<Catalog/>}/>
+      </Routes>
+
+    </div>
     </>
   )
 }
