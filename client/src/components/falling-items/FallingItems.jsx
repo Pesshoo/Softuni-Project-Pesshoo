@@ -1,10 +1,10 @@
 export default function FallingItems() {
     return (
-        <div class="falling-elements">
-            <div class="falling-item"></div>
-            <div class="falling-item"></div>
-            <div class="falling-item"></div>
-            <div class="falling-item"></div>
+        <div className="falling-elements">
+            <div className="falling-item"></div>
+            <div className="falling-item"></div>
+            <div className="falling-item"></div>
+            <div className="falling-item"></div>
         </div>
     )
 }

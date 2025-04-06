@@ -1,0 +1,38 @@
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .nav-left-side h1 {
+    color: #ca49e1;
+  }
+  
+  /* .nav-left-side , .nav-center-side , .nav-right-side {
+    flex-basis: 33.3%;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+  } */
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    display: block;
+    margin: 1em;
+  }
+  
+  nav ul li a{
+    color: #1a1a1a;
+  }
+  
+  .create-btn {
+    background-color: #ca49e1;
+    color: white;
+    padding-inline: 2em;
+    padding-block: 0.6em;
+    border-radius: 2em;
+  }
