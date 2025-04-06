@@ -5,11 +5,11 @@ import { Route, Routes } from 'react-router';
 import Catalog from './components/catalog/Catalog';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
-import CreatePost from './create-post/CreatePost';
-import PostDetails from './post-details/PostDetails';
+import CreatePost from './components/create-post/CreatePost';
 import FallingItems from './components/falling-items/FallingItems';
 import { UserContext } from './contexts/UserContext';
 import Logout from './components/logout/Logout';
+import PostDetails from './components/post-details/PostDetails';
 
 function App() {
 

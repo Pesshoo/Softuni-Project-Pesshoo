@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { useCreateAd } from "../api/adsApi";
+import { useCreateAd } from "../../api/adsApi";
 
 export default function CreatePost() {
   const navigate = useNavigate()

@@ -5,7 +5,7 @@
             "category": "Technology",
             "description": "The best choice of laptops you can make",
             "price": 235,
-            "imageUrl": "./images/table.png",
+            "imageUrl": "https://istyle.bg/media/catalog/product/cache/image/e9c3970ab036de70892d86c6d221abfe/m/a/macbook_air_space_gray_with_m1_chip_2-up_print__usen_6.jpg",
             "_createdOn": 1615545143015,
             "_id": "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
         },
@@ -15,7 +15,7 @@
             "category": "Cars",
             "description": "The fastest car in bulgaria...",
             "price": 1200,
-            "imageUrl": "./images/sofa.jpg",
+            "imageUrl": "https://7cars.bg/wp-content/uploads/2024/07/0-02-05-1693808a7fdf1cde88d3a6324b2cb88ee82037b3ecbad178fa4c076488784bf7_96a43b048c675580.jpg",
             "_createdOn": 1615545572296,
             "_id": "f5929b5c-bca4-4026-8e6e-c09e73908f77"
         },
@@ -25,8 +25,18 @@
             "category": "Clothing",
             "description": "The size is 3XL only for big men",
             "price": 180,
-            "img": "./images/chair.jpg",
+            "img": "https://img01.ztat.net/article/spp-media-p1/e0248edfa3bd4202a4f91a7fc40eac3c/b6822106f7444815839c1338fc9a8e93.jpg?imwidth=1800&filter=packshot",
             "_createdOn": 1615546332126,
             "_id": "c7f51805-242b-45ed-ae3e-80b68605141b"
+        },
+        "c7f51805-242b-45ed-ae3e-80b8385141c": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Armani Watch",
+            "category": "Accesories",
+            "description": "Only for tarikati",
+            "price": 180,
+            "img": "https://timebox.bg/image/cache/catalog/emporio%20armani%20mens/ar2448/Snimka-na-chasovnik-Emporio-Armani-AR2448-Renato-Chronograph-800x800.jpg",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-80b8385141c"
         }
 }
