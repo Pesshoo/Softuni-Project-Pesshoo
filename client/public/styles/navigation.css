@@ -36,3 +36,12 @@
     padding-block: 0.6em;
     border-radius: 2em;
   }
+
+  .login-btn {
+    background-color: #ffffff;
+    border: 1px solid #ca49e1;
+    color: #ca49e1;
+    padding-inline: 2em;
+    padding-block: 0.6em;
+    border-radius: 2em;
+  }

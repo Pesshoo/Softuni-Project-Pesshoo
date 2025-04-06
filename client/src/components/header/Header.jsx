@@ -24,7 +24,7 @@ export default function Header() {
                     </>
                 )
                 : <>
-                   <li><Link to="/login">Влез</Link></li>
+                   <li><Link className="login-btn" to="/login">Влез</Link></li>
                    <li><Link className="create-btn" to="/register">Регистрация</Link></li>
                   </>
               }

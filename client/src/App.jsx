@@ -9,6 +9,7 @@ import CreatePost from './create-post/CreatePost';
 import PostDetails from './post-details/PostDetails';
 import FallingItems from './components/falling-items/FallingItems';
 import { UserContext } from './contexts/UserContext';
+import Logout from './components/logout/Logout';
 
 function App() {
 
@@ -18,10 +19,15 @@ function App() {
     setAuthData(resultData)
   }
 
+  const userLogoutHandler = () => {
+    setAuthData({})
+  }
+
   const contextValue = useMemo(() => {
     return {
       ...authData,
       userLoginHandler,
+      userLogoutHandler,
     };
   }, [authData]);
 
@@ -36,6 +42,7 @@ function App() {
             <Route path='/catalog' element={<Catalog/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
+            <Route path='/logout' element={<Logout/>}/>
             <Route path='/create' element={<CreatePost/>}/>
             <Route path='/post/details' element={<PostDetails/>}/>
           </Routes>
