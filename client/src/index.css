@@ -19,12 +19,14 @@
 
 body {
   padding-inline: 2em;
+  overflow-y: hidden;  
 }
 
 .wrapper{
   padding-inline: 5em;
   margin: 0 auto;
   max-width: 1100px;
+  overflow-y: hidden;  
 }
 
 .navigation{
@@ -32,6 +34,10 @@ body {
   justify-content: space-around;
   align-content: center;
   align-items: center;
+}
+
+.nav-left-side h1 {
+  color: #ca49e1;
 }
 
 /* .nav-left-side , .nav-center-side , .nav-right-side {
@@ -195,4 +201,321 @@ button:focus-visible {
 .product-price {
   font-size: 1.1rem;
   color: #e74c3c;
+}
+
+
+/* Login */
+.login-container {
+  background-color: #fff;
+  padding: 2em 3em;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+.login-form input {
+  padding: 0.8em;
+  margin-bottom: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.login-form button {
+  background-color: #ca49e1;
+  color: #fff;
+  padding: 0.8em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #b838cc;
+}
+
+/* Register */
+
+.register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2em 3em;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-box h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+.register-form input {
+  padding: 0.8em;
+  margin-bottom: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.register-form button {
+  background-color: #ca49e1;
+  color: #fff;
+  padding: 0.8em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #b838cc;
+}
+
+/* Create Post */
+.ad-box {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2em 3em;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+.ad-box h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #333;
+}
+
+.ad-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-form label {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+.ad-form input,
+.ad-form textarea,
+.ad-form select {
+  padding: 0.8em;
+  margin-bottom: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.ad-form textarea {
+  resize: vertical;
+}
+
+.ad-form button {
+  background-color: #ca49e1;
+  color: #fff;
+  padding: 0.8em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ad-form button:hover {
+  background-color: #b838cc;
+}
+
+/* Details */
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 1000px;
+  margin: 4em auto;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.product-image-container {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.product-info {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-name {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.product-category-text {
+  font-size: 1em;
+  margin-bottom: 1em;
+  color: #777;
+}
+
+.product-price-text {
+  font-size: 1.5em;
+  color: #e74c3c;
+  margin-bottom: 1em;
+}
+
+.product-description-text {
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+  color: #444;
+  line-height: 1.6;
+}
+
+.add-to-cart-button {
+  padding: 1em;
+  background-color: #ca49e1;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #b23ecf;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    padding: 1.5em;
+  }
+
+  .product-image-container, .product-info {
+    flex: 1 1 100%;
+  }
+}
+
+/* Анимация за падащи елементи */
+.falling-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* за да не блокира кликането върху другите елементи */
+  z-index: -1; /* да е под останалото съдържание */
+}
+
+.falling-item {
+  position: absolute;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: #ca49e1;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fall 4s linear infinite;
+}
+
+.falling-item:nth-child(1) {
+  left: 10%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.falling-item:nth-child(2) {
+  left: 30%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.falling-item:nth-child(3) {
+  left: 50%;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.falling-item:nth-child(4) {
+  left: 70%;
+  animation-duration: 4s;
+  animation-delay: 3s;
+}
+
+/* Анимация на падащите елементи */
+@keyframes fall {
+  0% {
+    top: -20px;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }

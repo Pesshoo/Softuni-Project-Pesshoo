@@ -28,6 +28,7 @@ export default function Catalog() {
             <div class="product-info">
                 <h3 class="product-title">Продукт 3</h3>
                 <p class="product-price">Цена: 19.99 лв.</p>
+                <a href="/post/details">Разгледай сега!</a>
             </div>
         </div>
 
