@@ -1,14 +1,25 @@
 import { useNavigate } from "react-router";
 import { useCreateAd } from "../../api/adsApi";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 export default function CreatePost() {
   const navigate = useNavigate()
   const {create} = useCreateAd();
+  const { _id } = useContext(UserContext);
   const submitAction = async (formData) => {
 
-    const adData = Object.fromEntries(formData);
+    let adData = Object.fromEntries(formData);
+
+    adData = {
+      ...adData,
+      _ownerId: _id,
+    }
 
     console.log(adData);
+
+    console.log(_id);
+    
     
 
     const result = await create(adData);

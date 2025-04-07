@@ -19,6 +19,19 @@ export const useAds = () => {
     }
 }
 
+export const useAd = (idAd) => {
+    const [ad, setAd ] = useState({});
+
+    useEffect(() => {
+        request.get(`${baseUrl}/${idAd}`)
+            .then(setAd)
+    }, [idAd])
+
+    return {
+        ad,
+    }
+}
+
 export const useCreateAd = () => {
     const create = (adData) => {
         return request.post(baseUrl, adData)

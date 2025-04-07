@@ -1,5 +1,14 @@
 /* Catalog */
-  
+.catalog-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog-heading h2{
+  font-size: 3em;
+}
+
 .catalog {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

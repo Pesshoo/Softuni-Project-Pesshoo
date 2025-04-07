@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import Catalog from './components/catalog/Catalog';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
@@ -14,6 +14,7 @@ import PostDetails from './components/post-details/PostDetails';
 function App() {
 
   const [authData, setAuthData] = useState({});
+  const location = useLocation();
 
   const userLoginHandler = (resultData) => {
     setAuthData(resultData)
@@ -31,6 +32,12 @@ function App() {
     };
   }, [authData]);
 
+    if(location.pathname == "/catalog"){
+        document.body.style.overflowY = 'visible';
+    } else {
+        document.body.style.overflowY = 'hidden';
+    }
+
   return (
     <>
     <UserContext.Provider  value={contextValue}>
@@ -44,7 +51,7 @@ function App() {
             <Route path='/register' element={<Register/>}/>
             <Route path='/logout' element={<Logout/>}/>
             <Route path='/create' element={<CreatePost/>}/>
-            <Route path='/post/details' element={<PostDetails/>}/>
+            <Route path='/ads/:idAd/details' element={<PostDetails/>}/>
           </Routes>
           <FallingItems/>
         </div>

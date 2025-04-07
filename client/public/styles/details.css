@@ -59,6 +59,7 @@
   
   .add-to-cart-button {
     padding: 1em;
+    margin-block: 1em;
     background-color: #ca49e1;
     color: #fff;
     font-weight: bold;

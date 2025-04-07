@@ -10,7 +10,7 @@
             "_id": "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
         },
         "f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
             "title": "BMW E60",
             "category": "Cars",
             "description": "The fastest car in bulgaria...",
@@ -25,7 +25,7 @@
             "category": "Clothing",
             "description": "The size is 3XL only for big men",
             "price": 180,
-            "img": "https://img01.ztat.net/article/spp-media-p1/e0248edfa3bd4202a4f91a7fc40eac3c/b6822106f7444815839c1338fc9a8e93.jpg?imwidth=1800&filter=packshot",
+            "imageUrl": "https://img01.ztat.net/article/spp-media-p1/e0248edfa3bd4202a4f91a7fc40eac3c/b6822106f7444815839c1338fc9a8e93.jpg?imwidth=1800&filter=packshot",
             "_createdOn": 1615546332126,
             "_id": "c7f51805-242b-45ed-ae3e-80b68605141b"
         },
@@ -35,7 +35,7 @@
             "category": "Accesories",
             "description": "Only for tarikati",
             "price": 180,
-            "img": "https://timebox.bg/image/cache/catalog/emporio%20armani%20mens/ar2448/Snimka-na-chasovnik-Emporio-Armani-AR2448-Renato-Chronograph-800x800.jpg",
+            "imageUrl": "https://timebox.bg/image/cache/catalog/emporio%20armani%20mens/ar2448/Snimka-na-chasovnik-Emporio-Armani-AR2448-Renato-Chronograph-800x800.jpg",
             "_createdOn": 1615546332126,
             "_id": "c7f51805-242b-45ed-ae3e-80b8385141c"
         }
