@@ -60,6 +60,7 @@
   .add-to-cart-button {
     padding: 1em;
     margin-block: 1em;
+    text-align: center;
     background-color: #ca49e1;
     color: #fff;
     font-weight: bold;

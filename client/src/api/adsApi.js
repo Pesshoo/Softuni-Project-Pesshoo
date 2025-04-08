@@ -41,3 +41,27 @@ export const useCreateAd = () => {
         create,
     }
 }
+
+export const useEdit = () => {
+
+    const editAd = (idAd, adData) => {
+        return request.put(`${baseUrl}/${idAd}`, {...adData, _id: idAd})
+    }
+
+    return {
+        editAd,
+    }
+    
+}
+
+export const useDelete = () => {
+
+    const removeAd = (idAd) => {
+        return request.delete(`${baseUrl}/${idAd}`)
+    }
+
+    return {
+        removeAd,
+    }
+    
+}

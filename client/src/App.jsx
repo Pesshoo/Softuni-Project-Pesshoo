@@ -10,6 +10,7 @@ import FallingItems from './components/falling-items/FallingItems';
 import { UserContext } from './contexts/UserContext';
 import Logout from './components/logout/Logout';
 import PostDetails from './components/post-details/PostDetails';
+import EditAd from './components/edit-ad/EditAd';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Route path='/logout' element={<Logout/>}/>
             <Route path='/create' element={<CreatePost/>}/>
             <Route path='/ads/:idAd/details' element={<PostDetails/>}/>
+            <Route path='/ads/:idAd/edit' element={<EditAd/>}/>
           </Routes>
           <FallingItems/>
         </div>

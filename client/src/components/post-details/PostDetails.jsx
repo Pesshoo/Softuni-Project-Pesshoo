@@ -1,18 +1,27 @@
-import { useParams } from "react-router";
-import { useAd } from "../../api/adsApi";
+import { Link, useNavigate, useParams } from "react-router";
+import { useAd, useDelete } from "../../api/adsApi";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 export default function PostDetails() {
+  const navigate = useNavigate();
   const { idAd } = useParams();
   const {_id} = useContext(UserContext);
+  const { removeAd } = useDelete();
 
   const { ad } = useAd(idAd);
 
-  console.log(_id);
-  
+  const deleteClickHandler = async () => {
+    const hasConfirm = confirm(`Are you sure you want to delete ${ad.title}`)
 
-  console.log(ad._ownerId);
+    if (!hasConfirm){
+     return;
+    }
+
+    await removeAd(idAd)
+
+    navigate('/catalog');
+ }
   
   
     return (
@@ -29,8 +38,8 @@ export default function PostDetails() {
       </p>
       {_id == ad._ownerId 
         ? <>
-            <button class="add-to-cart-button">Редактиране</button>
-            <button class="add-to-cart-button">Изтриване</button>
+            <Link class="add-to-cart-button" to={`/ads/${idAd}/edit`}>Редактиране</Link>
+            <button class="add-to-cart-button" onClick={deleteClickHandler}>Изтриване</button>
           </>
         : <>
             <button class="add-to-cart-button">Добави в количката</button>
