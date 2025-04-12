@@ -6,6 +6,7 @@
 @import url(create-ad.css);
 @import url(details.css);
 @import url(falling-elements.css);
+@import url(footer.css);
 
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -24,15 +25,19 @@
   
   body {
     padding-inline: 2em;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   
   .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-inline: 5em;
     margin: 0 auto;
     max-width: 1100px;
-    overflow-y: hidden;  
-    overflow-x: hidden;  
+    /* overflow-y: hidden;  
+    overflow-x: hidden;   */
   }
   
   a {

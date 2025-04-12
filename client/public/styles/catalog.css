@@ -2,23 +2,90 @@
 .catalog-heading{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 .catalog-heading h2{
   font-size: 3em;
 }
 
+.catalog-heading input{
+  width: 60em;
+  padding: 1.5em;
+  border-radius: 3em;
+  border: 1px solid #ca49e1;
+  font-weight: 500;
+}
+
+.catalog-wrapper {
+  display: flex;
+  gap: 2em;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.filter-box {
+  width: 250px;
+  height: 30em;
+  background: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.filter-box h3 {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.filter-box label {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-box input,
+.filter-box select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #ca49e1;
+  border-radius: 5px;
+}
+
+.filter-box button {
+  margin-top: 1em;
+  width: 100%;
+  padding: 0.8em;
+  background-color: #ca49e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter-box button:hover {
+  background-color: #b238c7;
+}
+
+
 .catalog {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-    padding: 20px;
-  }
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
   
   .product-item {
+    height: 27em;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

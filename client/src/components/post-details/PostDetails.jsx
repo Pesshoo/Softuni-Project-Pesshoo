@@ -1,7 +1,8 @@
 import { Link, useNavigate, useParams } from "react-router";
 import { useAd, useDelete } from "../../api/adsApi";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import AdComments from "./AdComments";
 
 export default function PostDetails() {
   const navigate = useNavigate();
@@ -21,31 +22,36 @@ export default function PostDetails() {
     await removeAd(idAd)
 
     navigate('/catalog');
- }
+    };
   
   
     return (
-        <div class="product-container">
-    <div class="product-image-container">
-      <img src={ad.imageUrl} alt={ad.title}/>
-    </div>
-    <div class="product-info">
-      <h1 class="product-name">{ad.title}</h1>
-      <p class="product-category-text">Категория: {ad.category}</p>
-      <p class="product-price-text">Цена: <span>{ad.price} лв</span></p>
-      <p class="product-description-text">
-        {ad.description}
-      </p>
-      {_id == ad._ownerId 
-        ? <>
-            <Link class="add-to-cart-button" to={`/ads/${idAd}/edit`}>Редактиране</Link>
-            <button class="add-to-cart-button" onClick={deleteClickHandler}>Изтриване</button>
-          </>
-        : <>
-            <button class="add-to-cart-button">Добави в количката</button>
-          </>  
-      }
-    </div>
-  </div>
+      <>
+      <div className="product-container">
+        <div className="product-image-container">
+          <img src={ad.imageUrl} alt={ad.title} />
+        </div>
+        <div className="product-info">
+          <h1 className="product-name">{ad.title}</h1>
+          <p className="product-category-text">Категория: {ad.category}</p>
+          <p className="product-price-text">Цена: <span>{ad.price} лв</span></p>
+          <p className="product-description-text">{ad.description}</p>
+
+          {_id === ad._ownerId ? (
+            <>
+              <Link className="add-to-cart-button" to={`/ads/${idAd}/edit`}>Редактиране</Link>
+              <button className="add-to-cart-button" onClick={deleteClickHandler}>Изтриване</button>
+            </>
+          ) : (
+            <>
+              <button className="add-to-cart-button">Добави в количката</button>
+            </>
+          )}
+
+          <AdComments/>
+          
+        </div>
+      </div>
+    </>
     )
 }

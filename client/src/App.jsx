@@ -11,11 +11,12 @@ import { UserContext } from './contexts/UserContext';
 import Logout from './components/logout/Logout';
 import PostDetails from './components/post-details/PostDetails';
 import EditAd from './components/edit-ad/EditAd';
+import Footer from './components/footer/Footer';
+import usePersistedState from './components/hooks/usePersistedState';
 
 function App() {
 
-  const [authData, setAuthData] = useState({});
-  const location = useLocation();
+  const [authData, setAuthData] = usePersistedState({});
 
   const userLoginHandler = (resultData) => {
     setAuthData(resultData)
@@ -33,11 +34,11 @@ function App() {
     };
   }, [authData]);
 
-    if(location.pathname == "/catalog"){
-        document.body.style.overflowY = 'visible';
-    } else {
-        document.body.style.overflowY = 'hidden';
-    }
+    // if(location.pathname == "/catalog"){
+    //     document.body.style.overflowY = 'scroll';
+    // } else {
+    //     document.body.style.overflowY = 'hidden';
+    // }
 
   return (
     <>
