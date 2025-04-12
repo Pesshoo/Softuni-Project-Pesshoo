@@ -1,0 +1,68 @@
+/* Общи стилове за страницата */
+.profile-management {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    margin-top: 8em;
+}
+
+.profile-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 50em;
+    text-align: center;
+}
+
+.profile-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ca49e1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #ca49e1;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #ca49e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ca49e1;
+}
+
+.submit-btn:active {
+    background-color: #ca49e1;
+}

@@ -7,6 +7,7 @@
 @import url(details.css);
 @import url(falling-elements.css);
 @import url(footer.css);
+@import url(profile-manage.css);
 
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

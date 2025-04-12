@@ -13,6 +13,7 @@ import PostDetails from './components/post-details/PostDetails';
 import EditAd from './components/edit-ad/EditAd';
 import Footer from './components/footer/Footer';
 import usePersistedState from './components/hooks/usePersistedState';
+import ProfileManage from './components/profile-manage/ProfileManage';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
             <Route path='/register' element={<Register/>}/>
             <Route path='/logout' element={<Logout/>}/>
             <Route path='/create' element={<CreatePost/>}/>
+            <Route path='/profile' element={<ProfileManage/>}/>
             <Route path='/ads/:idAd/details' element={<PostDetails/>}/>
             <Route path='/ads/:idAd/edit' element={<EditAd/>}/>
           </Routes>
