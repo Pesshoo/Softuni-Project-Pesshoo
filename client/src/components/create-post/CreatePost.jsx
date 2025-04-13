@@ -18,7 +18,10 @@ export default function CreatePost() {
 
     try {
 
-      await create(adData);
+      const result = await create(adData);
+
+      console.log(result);
+      
 
       navigate('/catalog')
 
@@ -31,9 +34,9 @@ export default function CreatePost() {
     
   }
     return (
-        <div class="ad-box">
+        <div className="ad-box">
         <h2>Създай Обява</h2>
-        <form class="ad-form" action={submitAction}>
+        <form className="ad-form" action={submitAction}>
           <label htmlFor="title">Име на продукта</label>
           <input type="text" id="title" name="title" placeholder="Пример: BMW Е36" required/>
     
@@ -51,6 +54,12 @@ export default function CreatePost() {
             <option value="fashion">Мода</option>
             <option value="services">Услуги</option>
             <option value="other">Друго</option>
+          </select>
+
+          <label htmlFor="condition">Състояние</label>
+          <select id="condition" name="condition" required>
+            <option value="new">Ново</option>
+            <option value="used">Използвано</option>
           </select>
     
           <label htmlFor="image">Снимка</label>

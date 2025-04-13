@@ -4,6 +4,7 @@
             "title": "Macbook 1",
             "category": "tech",
             "description": "The best choice of laptops you can make",
+            "condition": "used",
             "price": 235,
             "imageUrl": "https://istyle.bg/media/catalog/product/cache/image/e9c3970ab036de70892d86c6d221abfe/m/a/macbook_air_space_gray_with_m1_chip_2-up_print__usen_6.jpg",
             "_createdOn": 1615545143015,
@@ -14,6 +15,7 @@
             "title": "BMW E60",
             "category": "cars",
             "description": "The fastest car in bulgaria...",
+            "condition": "used",
             "price": 1200,
             "imageUrl": "https://7cars.bg/wp-content/uploads/2024/07/0-02-05-1693808a7fdf1cde88d3a6324b2cb88ee82037b3ecbad178fa4c076488784bf7_96a43b048c675580.jpg",
             "_createdOn": 1615545572296,
@@ -24,6 +26,7 @@
             "title": "Nike tshirt",
             "category": "fashion",
             "description": "The size is 3XL only for big men",
+            "condition": "new",
             "price": 180,
             "imageUrl": "https://img01.ztat.net/article/spp-media-p1/e0248edfa3bd4202a4f91a7fc40eac3c/b6822106f7444815839c1338fc9a8e93.jpg?imwidth=1800&filter=packshot",
             "_createdOn": 1615546332126,
@@ -34,9 +37,99 @@
             "title": "Armani Watch",
             "category": "other",
             "description": "Only for tarikati",
+            "condition": "new",
             "price": 180,
             "imageUrl": "https://timebox.bg/image/cache/catalog/emporio%20armani%20mens/ar2448/Snimka-na-chasovnik-Emporio-Armani-AR2448-Renato-Chronograph-800x800.jpg",
             "_createdOn": 1615546332126,
             "_id": "c7f51805-242b-45ed-ae3e-80b8385141c"
+        },
+        "c7f51805-242b-45ed-ae3e-789798786": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Tank",
+            "category": "other",
+            "description": "Very powerful machine!",
+            "condition": "used",
+            "price": 1800000,
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Leopard_2_A5_der_Bundeswehr.jpg/1200px-Leopard_2_A5_der_Bundeswehr.jpg",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-789798786"
+        },
+        "c7f51805-242b-45ed-ae3e-98977999": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Mercedes e220",
+            "category": "cars",
+            "description": "Better than bmw!",
+            "condition": "used",
+            "price": 45000,
+            "imageUrl": "https://m.netinfo.bg/media/images/49234/49234141/1180-663-mercedes-benz-e-class.jpg",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-98977999"
+        },
+        "c7f51805-242b-45ed-ae3e-89629872": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Iphone 15",
+            "category": "tech",
+            "description": "If you need fast and cheap phone that must be your choice!",
+            "condition": "new",
+            "price": 1500,
+            "imageUrl": "https://cdncloudcart.com/402/products/images/146475/smartfon-apple-iphone-15-128gb-blue--128-gb-6504573f9005e_800x800.png?1694783351",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-98977999"
+        },
+        "c7f51805-242b-45ed-ae3e-67879800": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Mona Liza",
+            "category": "other",
+            "description": "One of the most famous painting in the world!",
+            "condition": "new",
+            "price": 150000000,
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/250px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-67879800"
+        },
+        "c7f51805-242b-45ed-ae3e-6866788": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Kugo Kirin G4",
+            "category": "other",
+            "description": "If you dont have enough money for a motorbike",
+            "condition": "used",
+            "price": 2000,
+            "imageUrl": "https://electricmove.bg/wp-content/uploads/2024/07/G2.jpg",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-6866788"
+        },
+        "c7f51805-242b-45ed-ae3e-8234824": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Table",
+            "category": "other",
+            "description": "Completes your kitchen with one of the largest tables",
+            "condition": "new",
+            "price": 1000,
+            "imageUrl": "https://orhideamebel.com/image/cache/catalog/Evromar/%D0%9C%D0%B0%D1%81%D0%B8/Lilis_90-600x400h.png",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-8234824"
+        },
+        "c7f51805-242b-45ed-ae3e-1231314": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Be your girlfriend for 24 houre",
+            "category": "services",
+            "description": "For 40 years old people who live with their parents",
+            "condition": "used",
+            "price": 500,
+            "imageUrl": "https://cdn.pixabay.com/photo/2022/04/06/11/30/girl-7115394_1280.jpg",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-1231314"
+        },
+        "c7f51805-242b-45ed-ae3e-43534534": {
+            "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+            "title": "Security",
+            "category": "services",
+            "description": "Let me protect your ass from assholes",
+            "condition": "used",
+            "price": 200,
+            "imageUrl": "https://qph.cf2.quoracdn.net/main-qimg-85c6c74cc8cc4bd4211bfc1e42dd559e-pjlq",
+            "_createdOn": 1615546332126,
+            "_id": "c7f51805-242b-45ed-ae3e-43534534"
         }
+        
 }

@@ -7,17 +7,19 @@ export default function Catalog() {
     const [searchTerm, setSearchTerm] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const [category, setCategory] = useState('Всички');
+    const [condition, setCondition] = useState('Всички');
     const [priceRange, setPriceRange] = useState({ min: '', max: '' });
     const adsPerPage = 10;
 
     const filteredAds = ads.filter(ad => {
         const matchTitle = ad.title.toLowerCase().includes(searchTerm.toLowerCase());
         const matchCategory = category === 'Всички' || ad.category === category;
+        const matchCondition = condition === 'Всички' || ad.condition === condition;
         const matchPrice =
           (!priceRange.min || Number(ad.price) >= Number(priceRange.min)) &&
           (!priceRange.max || Number(ad.price) <= Number(priceRange.max));
       
-        return matchTitle && matchCategory && matchPrice;
+        return matchTitle && matchCategory && matchPrice && matchCondition;
       });
 
     const indexOfLastAd = currentPage * adsPerPage;
@@ -58,10 +60,10 @@ export default function Catalog() {
 
                     <label>
                         Състояние:
-                        <select>
-                            <option>Всички</option>
-                            <option>Ново</option>
-                            <option>Използвано</option>
+                        <select value={condition} onChange={(e) => setCondition(e.target.value)}>
+                            <option value="Всички" >Всички</option>
+                            <option value="new">Ново</option>
+                            <option value="used">Използвано</option>
                         </select>
                     </label>
 
