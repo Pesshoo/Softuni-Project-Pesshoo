@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import { Route, Routes, useLocation } from 'react-router';
@@ -36,12 +36,6 @@ function App() {
       userLogoutHandler,
     };
   }, [authData]);
-
-    // if(location.pathname == "/catalog"){
-    //     document.body.style.overflowY = 'scroll';
-    // } else {
-    //     document.body.style.overflowY = 'hidden';
-    // }
 
   return (
     <>
