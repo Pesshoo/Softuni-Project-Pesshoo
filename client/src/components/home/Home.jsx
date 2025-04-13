@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Home() {
     
     return (
@@ -6,8 +8,8 @@ export default function Home() {
                 <h1>Добре дошъл в <span>Ofertichka.bg</span>!</h1>
                 <p>Мястото, където можеш лесно да купиш или продадеш всичко — от колелета до лаптопи.</p>
                 <div className="home-buttons">
-                    <a href="" className="create-btn">Разгледай обявите</a>
-                    <a href="" className="create-btn">Качи обява</a>
+                    <Link to="/catalog" className="create-btn">Разгледай обявите</Link>
+                    <Link to="/create" className="create-btn">Качи обява</Link>
                 </div>
             </div>
         </section>

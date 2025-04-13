@@ -2,12 +2,14 @@ import { useNavigate } from "react-router";
 import { UserContext } from "../../contexts/UserContext";
 import {useContext} from "react"
 import { useRegister } from "../../api/authApi";
+import { useNotification } from "../notifications/Notifications";
 
 export default function Register() {
 
   const navigate = useNavigate();
     const {register} = useRegister();
     const { userLoginHandler } = useContext(UserContext);
+    const { showNotification} = useNotification()
 
     const registerHandler = async (formData) => {
 
@@ -15,21 +17,27 @@ export default function Register() {
 
         const confirmPassword = formData.get('confirm-password');
 
-        console.log(values);
-        
-
         if (values.password !== confirmPassword) {
-            console.log('Password missmatch!');
-            return;
+          showNotification('Password missmatch!', "error");
+          return;
+      }
+        
+        try {
+
+          const authData = await register(values.email, values.password);
+
+          console.log(authData);
+  
+          userLoginHandler(authData);
+  
+          navigate('/')
+
+          showNotification("Successful Registration!", "success");
+
+        } catch(err){
+          showNotification(err.message, "error");
         }
 
-        const authData = await register(values.email, values.password);
-
-        console.log(authData);
-
-        userLoginHandler(authData);
-
-        navigate('/')
     }
 
     return (

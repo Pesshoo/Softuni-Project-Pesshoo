@@ -16,17 +16,18 @@ export default function CreatePost() {
       _ownerId: _id,
     }
 
-    console.log(adData);
+    try {
 
-    console.log(_id);
+      await create(adData);
+
+      navigate('/catalog')
+
+      showNotification("The ad was created succesfully!", "success");
+      
+    } catch (err) {
+      showNotification(err.message, "error");
+    }
     
-    
-
-    const result = await create(adData);
-
-    console.log(result);
-
-    navigate('/catalog')
     
   }
     return (

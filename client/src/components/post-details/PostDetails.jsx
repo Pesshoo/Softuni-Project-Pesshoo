@@ -3,12 +3,14 @@ import { useAd, useDelete } from "../../api/adsApi";
 import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import AdComments from "./AdComments";
+import { useNotification } from "../notifications/Notifications";
 
 export default function PostDetails() {
   const navigate = useNavigate();
   const { idAd } = useParams();
   const {_id} = useContext(UserContext);
   const { removeAd } = useDelete();
+  const { showNotification } = useNotification();
 
   const { ad } = useAd(idAd);
 
@@ -19,9 +21,17 @@ export default function PostDetails() {
      return;
     }
 
-    await removeAd(idAd)
+    try {
 
-    navigate('/catalog');
+      await removeAd(idAd)
+
+      navigate('/catalog');
+
+      showNotification("Tou succesfully delete your ad!", "success");
+
+    } catch (err) {
+      showNotification(err.message, "error");
+    }
     };
   
   

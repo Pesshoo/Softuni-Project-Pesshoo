@@ -14,6 +14,8 @@ import EditAd from './components/edit-ad/EditAd';
 import Footer from './components/footer/Footer';
 import usePersistedState from './components/hooks/usePersistedState';
 import ProfileManage from './components/profile-manage/ProfileManage';
+import { NotificationProvider } from './components/notifications/Notifications';
+import ProtectedRoutes from './components/protected-routes/ProtectedRoutes';
 
 function App() {
 
@@ -44,6 +46,7 @@ function App() {
   return (
     <>
     <UserContext.Provider  value={contextValue}>
+    <NotificationProvider>
         <Header/>
         <div className="wrapper">
 
@@ -53,13 +56,30 @@ function App() {
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/logout' element={<Logout/>}/>
-            <Route path='/create' element={<CreatePost/>}/>
-            <Route path='/profile' element={<ProfileManage/>}/>
+
+            <Route path='/create' element={ 
+              <ProtectedRoutes> 
+                <CreatePost/> 
+              </ProtectedRoutes> }/>
+
+            <Route path='/profile' element={
+              <ProtectedRoutes> 
+                <ProfileManage/>
+              </ProtectedRoutes>
+            }/>
+
             <Route path='/ads/:idAd/details' element={<PostDetails/>}/>
-            <Route path='/ads/:idAd/edit' element={<EditAd/>}/>
+
+            <Route path='/ads/:idAd/edit' element={
+              <ProtectedRoutes> 
+                <EditAd/>
+            </ProtectedRoutes>
+            }/>
+
           </Routes>
           <FallingItems/>
         </div>
+      </NotificationProvider>
     </UserContext.Provider>
     </>
   )

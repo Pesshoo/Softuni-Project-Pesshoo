@@ -2,12 +2,14 @@ import { useNavigate, useParams } from "react-router";
 import { useAd, useCreateAd, useEdit } from "../../api/adsApi";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import { useNotification } from "../notifications/Notifications";
 
 export default function EditAd() {
     const { idAd } = useParams();
     const { editAd } = useEdit();
     const { _id } = useContext(UserContext)
     const navigate = useNavigate()
+    const {showNotification} = useNotification();
 
     const { ad } = useAd(idAd);
 
@@ -20,16 +22,23 @@ export default function EditAd() {
             _ownerId: _id,
           }
 
+          try {
+            editAd(idAd, adData);
 
-        editAd(idAd, adData);
+            navigate(`/ads/${idAd}/details`)
 
-        navigate(`/ads/${idAd}/details`)
+            showNotification("The ad was edited successfully!", "success");
+            
+          } catch (err) {
+            showNotification(err.message, "error");
+          }
+
     }
     
     return (
-        <div class="ad-box">
+        <div className="ad-box">
         <h2>Редактиране На Обява</h2>
-        <form class="ad-form" action={editClickHandler}>
+        <form className="ad-form" action={editClickHandler}>
           <label htmlFor="title">Име на продукта</label>
           <input type="text" id="title" name="title" defaultValue={ad.title} placeholder="Пример: BMW Е36" required/>
     
